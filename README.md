@@ -1,11 +1,40 @@
-# ga-project-1
-General Assembly - Project 1
+# General Assembly - Project 1
 
-Proposal: Fake-Q Trivia Game
+####Proposal: Jankey-Q Trivia Game
 
-Description: This will be a trivia game where the user will answer 12 multiple choice questions to win the jackpot. The user has 10 seconds to answer the question that the host reads or they are eliminated. If they answer one of the questions wrong, they have a chance to use a life, which brings them back into the game. 
+##Project Overview
 
-Technologies Being Used: HTML and CSS for the website and Javascript for question/answer part.  
+###Project Schedule table
+
+Day | Deliverable
+Day 1: Sunday    | Game Idea, Wireframes, Pseudo Code
+Day 2: Monday    | Priority Matrix, Basic Clickable Model
+Day 3: Tuesday   | Coding
+Day 4: Wednesday | Working Prototype, Editing, Testing
+Day 5: Thursday  | Editing, Testing, Game Completed
+Day 6: Friday    | Presentation
+
+
+###Description
+This will be a trivia game where the user will answer 12 multiple choice questions to win the jackpot. The user has 10 seconds to answer the question that the host reads or they are eliminated. If they answer one of the questions wrong, they have a chance to use a life, which brings them back into the game. 
+
+###MVP
+
+
+###Post MVP
+
+###Wireframes
+
+###Game Components
+	landing page
+	game initialization
+	playing the game
+	winning the game
+
+###Functional Components
+
+###Technologies Being Used:
+HTML and CSS for the website and Javascript for question/answer part.  
 
 Implementation Problems: I would have to create a timer that resets after every question. To make it feel like there is a live host, I would need to have a video or image in the background, above the questions and a fake chat group running below the questions. Also, the answers are not in a,b,c format, they are clicked on and the color background changes. And I would need to load random questions, not the same ones in the same order.
 
