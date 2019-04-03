@@ -8,7 +8,8 @@ body{
 	max-width: 900px
 	max-height: 800px;
 	background-image: url('../images/game-show-background.jpeg');
-	background-repeat: repeat space;
+	background-repeat: round round;
+  /*background-repeat: repeat space;*/
 	font-family: 'Cabin Condensed', 'Cantarell', 'Karla', sans-serif;
 }
 
@@ -34,7 +35,7 @@ footer{
 
 .top{
 	font-family: 'Cabin Condensed', 'Cantarell', 'Karla', sans-serif;
-	font-size: 40px;
+	font-size: 50px;
 	background-color: #373c98;
 	border: 5px solid black;
 	border-radius: 25px;
@@ -43,16 +44,30 @@ footer{
   padding: 10px;
 }
 
-.timer{
+.host{
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border-color: yellow;
+}
+
+.countdown{
+  display: grid;
+  grid-template-rows: 50% 50%;
   font-family: 'Cabin Condensed', 'Cantarell', 'Karla', sans-serif;
   font-size: 30px;
   background-color: #373c98;
   border: 5px solid black;
   border-radius: 25px;
-  text-align: center;
+  text-align: right;
   color: yellow;
   padding: 10px;
 }
+
+#display{
+  padding: 10px;
+}
+
 .bottom{
 	font-family: 'Cabin Condensed', 'Cantarell', 'Karla', sans-serif;
 	background-color: #373c98;
@@ -102,19 +117,19 @@ footer{
   background-color: #2196F3;
 }
 
-/* Create the indicator (the dot/circle - hidden when not checked) */
+/* Create the circle (hidden when not checked) */
 .answerMark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the indicator (dot/circle) when checked */
+/* Show circle when checked */
 .answerButton input:checked ~ .answerMark:after {
   display: block;
 }
 
-/* Style the indicator (dot/circle) */
+/* Style the circle */
 .answerButton .answerMark:after {
   top: 9px;
   left: 9px;
@@ -122,4 +137,12 @@ footer{
   height: 8px;
   border-radius: 50%;
   background: white;
+}
+
+.correctAnswer{
+  font-family: 'Cabin Condensed', 'Cantarell', 'Karla', sans-serif;
+  font-style: italic;
+  color: limegreen;
+  text-align: center;
+  padding: 10px;
 }

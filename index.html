@@ -4,7 +4,7 @@
 	<title>Let's Play Jankey-Q!!!</title>
 <link rel="fonts" href="https://fonts.googleapis.com/css?family=Cabin+Condensed:600|Cantarell:700|Karla:700">
 <link rel="stylesheet" type="text/css" href="./css/main.css">
-<script src="./js/trivia.js"></script>
+<script defer src="./js/trivia.js"></script>
 
 </head>
 
@@ -17,37 +17,44 @@
 <br>
 <br>
 
-		<div class="timer">
-			Time Left 10 seconds
-		</div>
+	<div class="countdown">
+		<div><div class="host">placeholder</div>
+			<div><div id="display"></div>
+	</div></div>
+	</div>
 <br>
 <br>
-		<div class="game">
-			<h3>Question: What is the DOM?</h3>
-<input type="radio" checked="answerMark" name="answerButton">
-<label class="container">Placeholder: a programming interface HTML and XML documents
-  <span class="answerMark"></span>
-</label><br>
+	
+<form id = "questionForm">
+	<div class="game">
+		<!-- <h3 id="questionHeader"></h3>
+		<input type="radio" class="checkedAns" checked="checked" name="answerButton" value="correct">
+		<label class="container gameCorrectAns">Placeholder: 
+	  	<span class="answerMark"></span>
+		</label><br>
 
-<input type="radio" checked="checked" name="answerButton">
-<label class="container">Placeholder: champagne
-  <span class="answerMark"></span>
-</label><br>
+		<input type="radio" class="checkedAns" checked="checked" name="answerButton" value="wrong">
+		<label class="container gameAlternativeAns1">Placeholder: 
+		  <span class="answerMark"></span>
+		</label><br>
 
-<input type="radio" checked="checked" name="answerButton">
-<label class="container">Placeholder: the matrix
-  <span class="answerMark"></span>
-</label>
-<br>
-<p>Correct answer placeholder: a programming interface HTML and XML documents</p>
-		</div>
+		<input type="radio" class="checkedAns" checked="checked" name="answerBu tton" value="wrong">
+		<label class="container gameAlternativeAns2">Placeholder: 
+	  	<span class="answerMark"></span>
+		</label>
+		<br>
+		<br>
+		<button>Submit Answer</button>
+		<div class="correctAnswer">Correct answer placeholder: a programming interface HTML and XML documents</div> -->
+	</div>
+</form>
+
 <br>
 <br>
 		<div class="bottom">
 			<footer>made by Shenae Simmons 2019</footer>
 			</div>
-		
-</div>
 
+	<script src="timer.js"></script>
 </body>
 </html>
