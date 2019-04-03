@@ -32,7 +32,6 @@ This will be a trivia game where the user will answer 12 multiple choice questio
 	*timer for each question
 	*winning the game
 
-
 ###Functional Components
 
 ###Technologies Being Used:
@@ -43,4 +42,4 @@ Implementation Problems: I would have to create a timer that resets after every 
 Explanation to Solve the Problems:  Using setInterval in javascript to create the timer is the best option. I can place an image or video in the background of a div by using HTML and CSS.  The answer fields can be styled using CSS by having radio buttons and changing the color on hover and click. I could store at least 20 questions in the array and then use Math.random for the array length to churn out random questions. I can create a chat scroll using HTML, CSS and Javascript as well.
 
 ###Wireframes
-Wireframe is attached: 
+Wireframe is attached:
