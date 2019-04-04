@@ -28,8 +28,8 @@ const triviaQuestions = [
 {
 	question: "What is a great treat for cats?",
 	correctAnswer: "liver",
-	altAnswer1: "milk",
-	altAnswer2: "wine"
+	alternative1: "milk",
+	alternative2: "wine"
 },
 //  {
 //  	question: "What was the name of the London theatre built by Shakespeare's playing company in
@@ -39,7 +39,7 @@ const triviaQuestions = [
 // 	alternative2: "National Theatre"	
 // },
 {
-question: "What is the correct command to commit your files to GitHub",
+	question: "What is the correct command to commit your files to GitHub",
 	correctAnswer: "git commit -m",
 	alternative1: "commit -a",
 	alternative2: "command save"
@@ -93,6 +93,7 @@ question: "What is the correct command to commit your files to GitHub",
 	alternative2: "High Technology Master Level"
 }
 ];
+console.log(triviaQuestions[0])
 // function displayQuestion() {
 
 // document.getElementById('questionHeader').innerHTML = 
@@ -111,7 +112,7 @@ question: "What is the correct command to commit your files to GitHub",
 
 // console.log(triviaQuestions[0].correctAnswer);
 //document.getElementById('questionHeader').innerHTML = 'test';
-
+//
 const gameDiv = document.querySelector('.game');
 
 const create = () => {
@@ -120,23 +121,149 @@ const create = () => {
 		const ansCorrect = document.createElement('input')
 		const ansAlt1 = document.createElement('input');
 		const ansAlt2 = document.createElement('input');
+
+		const ansLabelAlt1 = document.createElement('label');
+		const ansLabelAlt2 = document.createElement('label');
 		const ansLabel = document.createElement('label');
 
 		questionHeader.innerHTML = `${triviaQuestions[i].question}`;
-		ansCorrect.innerHTML = `${triviaQuestions[i].correctAnswer}`;
-		ansCorrect.type = 'radio';
-		ansCorrect.value = `${triviaQuestions[i].correctAnswer}`;
-		ansLabel.innerHTML = `${triviaQuestions[i].correctAnswer}`;
-		ansAlt1.innerHTML = `${triviaQuestions[i].alternative1}`;
-		ansAlt2.innerHTML = `${triviaQuestions[i].alternative2}`;
 
+		ansCorrect.type = 'radio';
+		ansCorrect.className = 'radioBtns';
+		ansCorrect.name = 'radioBtns';
+		ansCorrect.checked = 'checked';
+		ansLabel.innerHTML = `${triviaQuestions[i].correctAnswer}`;
+		ansCorrect.value = `${triviaQuestions[i].correctAnswer}`;
+
+		ansAlt1.type = 'radio';
+		ansAlt1.className = 'radioBtns';
+		ansAlt1.name = 'radioBtns';
+		ansAlt1.checked = 'checked';
+		ansLabelAlt1.innerHTML = `${triviaQuestions[i].alternative1}`;
+		ansAlt1.value = `${triviaQuestions[i].alternative1}`;
+		
+		ansAlt2.type = 'radio';
+		ansAlt2.className = 'radioBtns';
+		ansAlt2.name = 'radioBtns';
+		ansAlt2.checked = 'checked';
+		ansLabelAlt2.innerHTML = `${triviaQuestions[i].alternative2}`;
+		ansAlt2.value = `${triviaQuestions[i].alternative2}`;
+		
 		gameDiv.appendChild(questionHeader);
-		gameDiv.appendChild(ansCorrect);
 		gameDiv.appendChild(ansLabel);
+		gameDiv.appendChild(ansCorrect);
+		gameDiv.appendChild(ansLabelAlt1);
 		gameDiv.appendChild(ansAlt1);
+		gameDiv.appendChild(ansLabelAlt2);
 		gameDiv.appendChild(ansAlt2);
 	}
 }
-create();
- 
+// create();
 
+
+//math random and math floor to randomly select questions
+
+const handleClick = () => {
+	let correctGif = "./images/best-correct.gif";
+	let wrongGif = "./images/nope.gif";
+
+	gameDiv.addEventListener('click', (evt) => {
+		let score = 0;
+		if (evt.target.className === 'radioBtns') {
+			triviaQuestions.forEach((question) => {
+				if (evt.target.value === question.correctAnswer) {
+					document.getElementById('gifs').innerHTML = "<img src=./images/best-correct.gif>";
+					// pushAns(question.correctAnswer)
+				} else if (evt.target.value !== question.correctAnswer) {
+					document.getElementById('gifs').innerHTML = "<img src=./images/nope.gif>";
+					// console.log('incorrect');
+				}
+			})
+		} else {
+			document.getElementById('gifs').innerHTML = "<img src=./images/quiz-garbage.gif>";
+		}
+	})
+};
+
+ handleClick();
+
+
+
+let newArr = [];
+ newArr = ['ansCorrect', 'ansAlt1', 'ansAlt2'];
+
+const pushAns = (ans) => {
+	newArr.push(ans)
+}
+
+for (let i = 0; i < triviaQuestions.length; i += 1) {
+	if (newArr[i] === triviaQuestions[i].correctAnswer) {
+		//do something
+	}
+}
+
+let randomIndex = Math.floor(Math.random() * triviaQuestions.length)
+
+const newCreate = () => {
+	// triviaQuestions[randomIndex].whatever
+		const questionHeader = document.createElement('h3');
+		const ansCorrect = document.createElement('input')
+		const ansAlt1 = document.createElement('input');
+		const ansAlt2 = document.createElement('input');
+
+		const ansLabelAlt1 = document.createElement('label');
+		const ansLabelAlt2 = document.createElement('label');
+		const ansLabel = document.createElement('label');
+
+		questionHeader.innerHTML = `${triviaQuestions[randomIndex].question}`;
+
+		ansCorrect.type = 'radio';
+		ansCorrect.className = 'radioBtns';
+		ansCorrect.name = 'radioBtns';
+		ansCorrect.checked = 'checked';
+		ansLabel.innerHTML = `${triviaQuestions[randomIndex].correctAnswer}`;
+		ansCorrect.value = `${triviaQuestions[randomIndex].correctAnswer}`;
+
+		ansAlt1.type = 'radio';
+		ansAlt1.className = 'radioBtns';
+		ansAlt1.name = 'radioBtns';
+		ansAlt1.checked = 'checked';
+		ansLabelAlt1.innerHTML = `${triviaQuestions[randomIndex].alternative1}`;
+		ansAlt1.value = `${triviaQuestions[randomIndex].alternative1}`;
+		
+		ansAlt2.type = 'radio';
+		ansAlt2.className = 'radioBtns';
+		ansAlt2.name = 'radioBtns';
+		ansAlt2.checked = 'checked';
+		ansLabelAlt2.innerHTML = `${triviaQuestions[randomIndex].alternative2}`;
+		ansAlt2.value = `${triviaQuestions[randomIndex].alternative2}`;
+		
+		gameDiv.appendChild(questionHeader);
+		gameDiv.appendChild(ansLabel);
+		gameDiv.appendChild(ansCorrect);
+		gameDiv.appendChild(ansLabelAlt1);
+		gameDiv.appendChild(ansAlt1);
+		gameDiv.appendChild(ansLabelAlt2);
+		gameDiv.appendChild(ansAlt2);
+
+};
+
+newCreate();
+//start over or end game
+
+
+//check answer
+// const checkAnswer = () => {
+// 	let wrongAnswer = document.getElementById('wrongAnswer');
+// 	let wrongGif = "./images/nope.gif";
+// 	let correctAnswer = document.getElementById('gif');
+// 	let correctGif = "./images/nope.gif";
+// 	let userAnswer = document.querySelector('.checkedAns:checked');
+// 	if(userAnswer === ansCorrect.value) {
+// 		document.getElementById('gifs').innerHTML = "<img src=" + correctGif;
+// 		//go to next question
+// 	} else {
+// 		document.getElementById('gifs').innerHTML = "<img src=" + wrongGif;
+//start over or end game
+// 	}
+// }

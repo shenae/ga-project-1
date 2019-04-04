@@ -28,44 +28,72 @@ footer{
 
 .main{
 	display: grid;
+  width: 100%;
+  max-height: 700px;
 	grid-template-columns: 100%;
 	grid-template-rows: 20% 20% 50% 10%
 	border: 5px solid black;
 }
 
 .top{
+  max-width: 900px;
 	font-family: 'Cabin Condensed', 'Cantarell', 'Karla', sans-serif;
 	font-size: 50px;
 	background-color: #373c98;
 	border: 5px solid black;
 	border-radius: 25px;
+  justify-content: center;
 	text-align: center;
   color: hotpink;
   padding: 10px;
 }
 
-.host{
+#host{
   width: 100px;
   height: 100px;
-  border-radius: 50px;
+  border-radius: 25px;
   border-color: yellow;
+  text-align: center;
+}
+
+#hurry{
+  width: 100px;
+  height: 100px;
+  border-radius: 25px;
+  border-color: yellow;
+  justify-content: right;
+  align-self: right;
 }
 
 .countdown{
   display: grid;
-  grid-template-rows: 50% 50%;
+  height: 300px;
+  width: 900px;
+  grid-template-columns: 30% 30% 30%;
   font-family: 'Cabin Condensed', 'Cantarell', 'Karla', sans-serif;
   font-size: 30px;
   background-color: #373c98;
   border: 5px solid black;
   border-radius: 25px;
-  text-align: right;
+  text-align: center;
   color: yellow;
   padding: 10px;
 }
 
 #display{
   padding: 10px;
+}
+
+#gifs{
+  /*padding: 10px;*/
+  width: 100px;
+  height: 80px;
+}
+
+.img{
+  /*padding: 10px;*/
+  width: 100px;
+  height: 80px;
 }
 
 .bottom{
@@ -80,6 +108,9 @@ footer{
 	border: 5px solid black;
 	border-radius: 25px;
 	padding: 15px;
+}
+button{
+  justify-content: right;
 }
 
 .answerButton {
