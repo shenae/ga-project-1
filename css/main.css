@@ -1,15 +1,9 @@
-/* radio buttons for answers */
-/* change color on answers 
-set up div for video/pictures */
-
-/* page template */
 
 body{
 	max-width: 900px
 	max-height: 800px;
 	background-image: url('../images/game-show-background.jpeg');
 	background-repeat: round round;
-  /*background-repeat: repeat space;*/
 	font-family: 'Cabin Condensed', 'Cantarell', 'Karla', sans-serif;
 }
 
@@ -81,19 +75,13 @@ footer{
 }
 
 #display{
+  font-family: 'Cabin Condensed', 'Cantarell', 'Karla', sans-serif;
+  font-size: 40px;
   padding: 10px;
 }
 
 #gifs{
-  /*padding: 10px;*/
-  width: 100px;
-  height: 80px;
-}
-
-.img{
-  /*padding: 10px;*/
-  width: 100px;
-  height: 80px;
+  padding: 10px;
 }
 
 .bottom{
@@ -109,71 +97,12 @@ footer{
 	border-radius: 25px;
 	padding: 15px;
 }
+
 button{
-  justify-content: right;
-}
-
-.answerButton {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.answerButton input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-.answerMark {
-  position: relative;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: white;
-  border-radius: 50%;
-}
-
-.answerButton input:checked ~ .answerMark {
-  background-color: #2196F3;
-}
-
-/* Create the circle (hidden when not checked) */
-.answerMark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show circle when checked */
-.answerButton input:checked ~ .answerMark:after {
-  display: block;
-}
-
-/* Style the circle */
-.answerButton .answerMark:after {
-  top: 9px;
-  left: 9px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: white;
-}
-
-.correctAnswer{
   font-family: 'Cabin Condensed', 'Cantarell', 'Karla', sans-serif;
-  font-style: italic;
-  color: limegreen;
-  text-align: center;
+  font-size: 20px;
+  border-radius: 25px;
   padding: 10px;
+  background-color: limegreen;
+  justify-content: right;
 }
