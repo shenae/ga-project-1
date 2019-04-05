@@ -31,12 +31,12 @@ footer{
 
 .top{
   max-width: 900px;
+  margin: 0 auto;
 	font-family: 'Cabin Condensed', 'Cantarell', 'Karla', sans-serif;
 	font-size: 50px;
 	background-color: #373c98;
 	border: 5px solid black;
 	border-radius: 25px;
-  justify-content: center;
 	text-align: center;
   color: hotpink;
   padding: 10px;
@@ -62,7 +62,6 @@ footer{
 .countdown{
   display: grid;
   height: 300px;
-  width: 900px;
   grid-template-columns: 30% 30% 30%;
   font-family: 'Cabin Condensed', 'Cantarell', 'Karla', sans-serif;
   font-size: 30px;
@@ -100,7 +99,7 @@ footer{
 
 button{
   font-family: 'Cabin Condensed', 'Cantarell', 'Karla', sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   border-radius: 25px;
   padding: 10px;
   background-color: limegreen;
